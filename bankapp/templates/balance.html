@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+{% extends "home.html" %}
+{% block body_block %}
+<br>
+<br><br>
+<form method="post" action="" enctype="multipart/form-data">
+
+    {%csrf_token%}
+    <h3 align="center"><b>₹{{balance}}</b></h3>
+    <p align="center" style="color:red">Available Balance</p>
+
+    </form>
+                    {% endblock %}
+</html>

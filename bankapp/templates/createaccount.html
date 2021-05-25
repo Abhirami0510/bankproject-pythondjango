@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{% extends "home.html" %}
+{% block body_block %}
+<br>
+<br>
+<form method="post" action="" enctype="multipart/form-data">
+ <div class="col d-flex justify-content-center">
+      <div class="card bg-white" style="width: 25rem;">
+
+  <div class="card-body">
+    <h4 class="card-title" align="center">CREATE ACCOUNT</h4>
+    <p class="card-text">
+                {%csrf_token%}
+                {{form.as_p}}
+    <div class="text-center">
+        <input type="submit"  class="btn btn-success" value="Create">
+    </p>
+  </div>
+  </div>
+</div>
+         </div>
+    </form>
+                    {% endblock %}

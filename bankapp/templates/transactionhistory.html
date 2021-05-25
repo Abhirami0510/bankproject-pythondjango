@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+{% extends "home.html" %}
+{% block body_block %}
+
+<br><h3 align="center" style="color:red"> Debit Transactions </h3>
+{% if dtransactions %}
+
+<table class="table table-white" style="color:dark" >
+      <tr>
+            <td></td>
+            <td><strong>Transaction Date</strong></td>
+            <td><strong>Account Number</strong></td>
+            <td><strong>Narration</strong></td>
+            <td><strong>Amount</strong></td>
+      </tr>
+
+            {% for transaction in dtransactions %}
+            <tr>
+                  <td></td>
+                  <td>{{transaction.date}}</td>
+                  <td>{{transaction.to_account_number}}</td>
+                  <td>{{transaction.remarks}}</td>
+                  <td>₹{{transaction.amount}}</td>
+      </tr>
+      {% endfor %}
+</table>
+{% else %}
+<br><br><h4 style="text-align:center">No Transactions</h4>
+{% endif %}
+<br>
+<h3 align="center" style="color:green"> Credit Transactions </h3>
+{% if ctransactions %}
+<table class="table table-white" style="color:dark" >
+      <tr>
+            <td></td>
+            <td><strong>Transaction Date</strong></td>
+            <td><strong>Account Number</strong></td>
+            <td><strong>Narration</strong></td>
+            <td><strong>Amount</strong></td>
+      </tr>
+
+            {% for transaction in ctransactions %}
+            <tr>
+                  <td></td>
+                  <td>{{transaction.date}}</td>
+                  <td>{{transaction.to_account_number}}</td>
+                  <td>{{transaction.remarks}}</td>
+                  <td>₹{{transaction.amount}}</td>
+      </tr>
+      {% endfor %}
+</table>
+{%else%}
+<br><br><h6 style="text-align:center">No Transactions</h6>
+{% endif %}
+{% endblock %}
+</html>
