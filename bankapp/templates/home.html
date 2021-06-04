@@ -29,7 +29,6 @@
                     <a class="list-group-item list-group-item-action bg-info text-white" href="{%url 'accountcreation'%}">Create Account</a>
                     {% else %}
                     <a class="list-group-item list-group-item-action bg-info text-white" href="{% url 'transaction' %}">Fund Transfer</a>
-                    <a class="list-group-item list-group-item-action bg-info text-white" href="{% url 'balance' %}">View Balance</a>
                     <a class="list-group-item list-group-item-action bg-info text-white" href="{% url 'transactionhistory' %}">Transaction History</a>
                     {% endif %}
                 </div>
@@ -83,7 +82,7 @@
     { console.log("test");
         fetch("http://127.0.0.1:8000/bank/balance/").
         then(res=>res.json()).
-        then(data=>alert(data.balance)).catch(err=>console.log(err));
+        then(data=>alert("Available Balance : ₹"+data.balance)).catch(err=>console.log(err));
     }
 
 

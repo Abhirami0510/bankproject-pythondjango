@@ -2,7 +2,7 @@
 {% extends "home.html" %}
 {% block body_block %}
 
-<br><h3 align="center" style="color:red"> Debit Transactions </h3>
+<br><h3 align="center" style="color:white;background-color:blue"> DEBIT TRANSACTIONS </h3>
 {% if dtransactions %}
 
 <table class="table table-white" style="color:dark" >
@@ -25,10 +25,10 @@
       {% endfor %}
 </table>
 {% else %}
-<br><br><h4 style="text-align:center">No Transactions</h4>
+<br><br><h6 style="text-align:center;color:red"><b>No Transactions</b></h6>
 {% endif %}
 <br>
-<h3 align="center" style="color:green"> Credit Transactions </h3>
+<h3 align="center" style="color:white;background-color:blue">CREDIT TRANSACTIONS</h3>
 {% if ctransactions %}
 <table class="table table-white" style="color:dark" >
       <tr>
@@ -50,7 +50,7 @@
       {% endfor %}
 </table>
 {%else%}
-<br><br><h6 style="text-align:center">No Transactions</h6>
+<br><br><h6 style="text-align:center;color:red"><b>No Transactions</b></h6>
 {% endif %}
 {% endblock %}
 </html>
